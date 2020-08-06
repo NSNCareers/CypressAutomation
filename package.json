@@ -18,5 +18,8 @@
   "homepage": "https://github.com/ElvisTurorial/CypressAutomation#readme",
   "dependencies": {
     "cypress": "^4.12.1"
+  },
+  "devDependencies": {
+    "cypress-iframe": "^1.0.1"
   }
 }
