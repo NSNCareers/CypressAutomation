@@ -1,0 +1,22 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "To install dependencies for our project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElvisTurorial/CypressAutomation.git"
+  },
+  "author": "A E Ngwesse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElvisTurorial/CypressAutomation/issues"
+  },
+  "homepage": "https://github.com/ElvisTurorial/CypressAutomation#readme",
+  "dependencies": {
+    "cypress": "^4.12.1"
+  }
+}
