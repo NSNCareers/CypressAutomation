@@ -19,6 +19,8 @@
 * ./node_modules/.bin/cypress run => Run all tests headless
 * ./node_modules/.bin/cypress run --headed => Run all tests 
 * ./node_modules/.bin/cypress run --headed --browser chrome => Run all tests in specific browser
+* ./node_modules/.bin/cypress run --spec cypress/testSuite/loginTests/LoginLogoutTest.js => to run specific test
+* ./node_modules/.bin/cypress run --spec cypress/testSuite/loginTests/LoginLogoutTest.js --headed
 
 # Test Commands
 

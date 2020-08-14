@@ -23,3 +23,27 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+// Click on webelement
+Cypress.Commands.add("clickOnElement", (element) => { 
+    cy.get(element).click();
+});
+
+// Click on element with text locator
+Cypress.Commands.add("clickOnElementWithText", (element) => { 
+    cy.contains(element).click();
+});
+
+// Verify element contains text
+Cypress.Commands.add("elementContainsText", (element,text) => { 
+    cy.get(element).should('contain.text',text);
+});
+
+//Get text from element
+Cypress.Commands.add("GetTextFromElement", (element) => { 
+    cy.get(element).then(function(ele)
+    {
+        var text = ele.text();
+        return text;
+    })
+});

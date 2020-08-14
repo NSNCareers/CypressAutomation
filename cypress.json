@@ -1,3 +1,9 @@
 {
-    "defaultCommandTimeout":6000
+    "defaultCommandTimeout": 6000,
+    "fixturesFolder": "cypress/dataDriven",
+    "integrationFolder": "cypress/testSuite",
+    "env":
+    {
+        "url": "http://register.nsncareers.com"
+    }
 }
