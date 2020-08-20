@@ -1,8 +1,7 @@
 pipeline{
 
    agent { label "slave01" }
-    
-    
+   tools {nodejs "node"}
     environment{
     NAME="Ngwesse Elvis"
     BuildOutput="./BuildOutput"  
@@ -25,8 +24,7 @@ pipeline{
         stage('Install nodejs and npm'){
             steps{
                 echo 'Restoring Solution'
-                sh 'npm -v'
-                sh 'node -v'
+                sh 'npm config ls'
             }
         }
 
