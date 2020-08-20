@@ -25,8 +25,8 @@ pipeline{
         stage('Install nodejs and npm'){
             steps{
                 echo 'Restoring Solution'
-                sh 'sudo apt install nodejs'
-                sh 'sudo apt install npm'
+                sh 'install nodejs'
+                sh 'install npm'
             }
         }
 
