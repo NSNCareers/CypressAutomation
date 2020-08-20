@@ -1,0 +1,78 @@
+pipeline{
+
+   agent { label "slave01" }
+    
+    
+    environment{
+    NAME="Ngwesse Elvis"
+    BuildOutput="./BuildOutput"  
+    }
+    
+   
+    stages{
+    
+
+        
+        stage('Checkout from SCM'){
+            steps{
+                echo 'Checking Out from GitHub'
+                echo "NAME = ${env.NAME}"
+            }
+        }
+        
+          
+
+        stage('Restore Solution'){
+            steps{
+                echo 'Restoring Solution'
+            }
+        }
+
+        stage('Install Cypress'){
+            steps{
+                echo 'Building Solution'
+                 sh 'npm install cypress'
+            }
+        }
+
+        stage('Testing Project'){
+            steps{
+                echo 'Running unit tests'
+                 sh 'npm run recordDashboardTests'
+            }
+
+        }
+
+        stage('Publish build'){
+            steps{
+                 echo 'Publishing Solution'
+            }
+
+        }
+        
+       }
+       
+       
+        
+        
+          post {
+        always {
+            echo 'One way or another, I have finished'
+            deleteDir() /* clean up our workspace */
+        }
+        success {
+            echo 'I succeeeded!'
+        }
+        unstable {
+            echo 'I am unstable :/'
+        }
+        failure {
+            echo 'I failed :('
+        }
+        changed {
+            echo 'Things were different before...'
+        }
+        
+    } 
+     
+}
