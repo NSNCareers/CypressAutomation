@@ -8,7 +8,7 @@ class HomePage
 
     clickOnLoginLink()
     {
-        cy.clickOnElement('ul>li>a[href*="Register"]');
+        cy.clickOnElement('ul>li>a[href*="Login"]');
     }
 
     getPageTitle()

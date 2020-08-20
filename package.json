@@ -4,7 +4,12 @@
   "description": "To install dependencies for our project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "headlessTests": "./node_modules/.bin/cypress run",
+    "headedTests": "npm run headlessTests -- --headed",
+    "testRunner": "./node_modules/.bin/cypress open",
+    "chromeTest": "npm run headedTests -- --browser chrome",
+    "recordDashboardTests":"npm run headlessTests -- --record --key 66d1426b-f3b8-47e9-924a-251f0d4caabc --reporter mochawesome",
+    "specificTest": "npm run headlessTests --spec \"cypress/testSuite/loginTests/*\""
   },
   "repository": {
     "type": "git",
@@ -17,7 +22,9 @@
   },
   "homepage": "https://github.com/ElvisTurorial/CypressAutomation#readme",
   "dependencies": {
-    "cypress": "^4.12.1"
+    "cypress": "^4.12.1",
+    "mocha": "^8.1.1",
+    "mochawesome": "^6.1.1"
   },
   "devDependencies": {
     "cypress-iframe": "^1.0.1"

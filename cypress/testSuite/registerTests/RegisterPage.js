@@ -3,7 +3,7 @@
 
 import "cypress-iframe"
 import HomePage from '../../pageObject/HomePage'
-import LoginPage from "../../pageObject/loginPage"
+import RegisterPage from '../../pageObject/RegisterPage'
 
 
 describe('Hooks', () => {
@@ -28,16 +28,11 @@ describe('Hooks', () => {
       // runs once after all tests in the block
     })
 
-    it("Register new User",function(){
-      var homePage = new HomePage();
-      var loginPage = new LoginPage();
-      cy.visit(Cypress.env('url'));
-      homePage.clickOnLoginLink();
-      loginPage.enterUserEmal(this.data.email);
-      loginPage.enterUserPassword(this.data.password);
-      loginPage.clickOnRememberMeCheckBox();
-      loginPage.clickOnLoginButton();
-
-
-  })
+    it("Navigate to Register Page",function(){
+        var homePage = new HomePage();
+        var registerPage = new RegisterPage();
+        cy.visit(Cypress.env('url'));
+        homePage.clickOnRegisterLink();
+        cy.elementContainsText('div>form>h4','Create a new account.');
+    })
   })

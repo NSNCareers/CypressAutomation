@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-08-20T05:12:07.196Z",
+    "end": "2020-08-20T05:12:17.013Z",
+    "duration": 9817,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d33cfff2-048c-4e7f-9001-a5cc21d098aa",
+      "title": "",
+      "fullFile": "cypress/testSuite/registerTests/RegisterUserTest.js",
+      "file": "cypress/testSuite/registerTests/RegisterUserTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ce779901-decd-4eb1-8ca5-ca6ef0250429",
+          "title": "Hooks",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register new User",
+              "fullTitle": "Hooks Register new User",
+              "timedOut": null,
+              "duration": 8935,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var homePage = new _HomePage[\"default\"]();\nvar registerPage = new _RegisterPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nhomePage.clickOnRegisterLink(); //var el = registerPage.getCreateAccountElement();\nregisterPage.enterUserEmal(this.data.email1);\nregisterPage.enterUserPassword(this.data.password);\nregisterPage.enterUserConfirmPassword(this.data.password);\ncy.get('button[type=\"submit\"]').click();\ncy.elementContainsText('div>main>h1', 'Register confirmation');\ncy.elementContainsText('div>main>p', 'Please check your email to confirm your account.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected '<h1>' to contain text 'Register confirmation', but the text was 'Register'",
+                "estack": "AssertionError: Timed out retrying: expected '<h1>' to contain text 'Register confirmation', but the text was 'Register'\n    at Context.eval (http://register.nsncareers.com/__cypress/tests?p=cypress/support/index.js:39:19)",
+                "diff": "- 'Register'\n+ 'Register confirmation'\n"
+              },
+              "uuid": "1c9e9f21-7f58-444d-8797-87b9340c7c6b",
+              "parentUUID": "ce779901-decd-4eb1-8ca5-ca6ef0250429",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1c9e9f21-7f58-444d-8797-87b9340c7c6b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8935,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

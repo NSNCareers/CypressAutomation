@@ -12,6 +12,8 @@
 * node_modules/.bin/cypress open to open Test Runner
 * You can override the config file by using the cypress.json file
 * /// <reference types="Cypress" /> Add to your test file to get inteliscence 
+* npm install cypress --save -dev mochawesome => Mocha reports
+* npm install cypress --save -dev mocha => This depends on the above command
 
 
 # Commands
@@ -21,6 +23,9 @@
 * ./node_modules/.bin/cypress run --headed --browser chrome => Run all tests in specific browser
 * ./node_modules/.bin/cypress run --spec cypress/testSuite/loginTests/LoginLogoutTest.js => to run specific test
 * ./node_modules/.bin/cypress run --spec cypress/testSuite/loginTests/LoginLogoutTest.js --headed
+* ./node_modules/.bin/cypress run --record --key 66d1426b-f3b8-47e9-924a-251f0d4caabc  => Ccreate project and run tests 
+* ./node_modules/.bin/cypress run --reporter mochawesome => Run mochasome reports
+* I have rapped all of the above commands in script section of package.json
 
 # Test Commands
 

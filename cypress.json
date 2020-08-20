@@ -1,9 +1,10 @@
 {
-    "defaultCommandTimeout": 6000,
-    "fixturesFolder": "cypress/dataDriven",
-    "integrationFolder": "cypress/testSuite",
-    "env":
-    {
-        "url": "http://register.nsncareers.com"
-    }
+  "defaultCommandTimeout": 6000,
+  "fixturesFolder": "cypress/dataDriven",
+  "integrationFolder": "cypress/testSuite",
+  "reporter": "mochawesome",
+  "env": {
+    "url": "http://register.nsncareers.com"
+  },
+  "projectId": "ketq1m"
 }
