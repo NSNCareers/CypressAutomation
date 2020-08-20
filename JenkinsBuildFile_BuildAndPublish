@@ -24,7 +24,7 @@ pipeline{
         stage('Install nodejs and npm'){
             steps{
                 echo 'Restoring Solution'
-                sh 'npm config ls'
+                sh 'npm install'
             }
         }
 
