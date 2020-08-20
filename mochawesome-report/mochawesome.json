@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2020-08-20T13:15:34.361Z",
-    "end": "2020-08-20T13:15:38.923Z",
-    "duration": 4562,
+    "failures": 1,
+    "start": "2020-08-20T13:26:02.288Z",
+    "end": "2020-08-20T13:26:11.055Z",
+    "duration": 8767,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2ebe3344-1c3a-43da-a2d3-bbaf618c755f",
+      "uuid": "7567d751-2462-4369-b3dc-daac09bc4cc3",
       "title": "",
       "fullFile": "cypress/testSuite/registerTests/RegisterUserTest.js",
       "file": "cypress/testSuite/registerTests/RegisterUserTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "94ca38d2-39fb-4add-9681-20eb3f048a37",
+          "uuid": "c78ca8ad-5cb7-421c-a132-04c785c34f7c",
           "title": "Hooks",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Register new User",
               "fullTitle": "Hooks Register new User",
               "timedOut": null,
-              "duration": 3665,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 7889,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "var homePage = new _HomePage[\"default\"]();\nvar registerPage = new _RegisterPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nhomePage.clickOnRegisterLink(); //var el = registerPage.getCreateAccountElement();\nregisterPage.enterUserEmal(this.data.email1);\nregisterPage.enterUserPassword(this.data.password);\nregisterPage.enterUserConfirmPassword(this.data.password);\ncy.get('button[type=\"submit\"]').click();\ncy.elementContainsText('div>main>h1', 'Register confirmation');\ncy.elementContainsText('div>main>p', 'Please check your email to confirm your account.');",
-              "err": {},
-              "uuid": "ebc39c8a-c706-4cf2-a4dd-2862f302af9a",
-              "parentUUID": "94ca38d2-39fb-4add-9681-20eb3f048a37",
+              "code": "var homePage = new _HomePage[\"default\"]();\nvar registerPage = new _RegisterPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nhomePage.clickOnRegisterLink(); //var el = registerPage.getCreateAccountElement();\nregisterPage.enterUserEmal(this.data.email1);\nregisterPage.enterUserPassword(this.data.password);\nregisterPage.enterUserConfirmPassword(this.data.password); //cy.get('button[type=\"submit\"]').click();\ncy.elementContainsText('div>main>h1', 'Register confirmation');\ncy.elementContainsText('div>main>p', 'Please check your email to confirm your account.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected '<h1>' to contain text 'Register confirmation', but the text was 'Register'",
+                "estack": "AssertionError: Timed out retrying: expected '<h1>' to contain text 'Register confirmation', but the text was 'Register'\n    at Context.eval (http://loging.nsncareers.com/__cypress/tests?p=cypress/support/index.js:39:19)",
+                "diff": "- 'Register'\n+ 'Register confirmation'\n"
+              },
+              "uuid": "edd4056b-ec6d-433f-ada1-ce3386845d42",
+              "parentUUID": "c78ca8ad-5cb7-421c-a132-04c785c34f7c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "ebc39c8a-c706-4cf2-a4dd-2862f302af9a"
+          "passes": [],
+          "failures": [
+            "edd4056b-ec6d-433f-ada1-ce3386845d42"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3665,
+          "duration": 7889,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
