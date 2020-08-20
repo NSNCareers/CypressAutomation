@@ -4,7 +4,7 @@
   "integrationFolder": "cypress/testSuite",
   "reporter": "mochawesome",
   "env": {
-    "url": "http://register.nsncareers.com"
+    "url": "http://loging.nsncareers.com"
   },
   "projectId": "ketq1m"
 }

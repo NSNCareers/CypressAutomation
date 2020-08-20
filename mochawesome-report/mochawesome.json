@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-08-20T05:12:07.196Z",
-    "end": "2020-08-20T05:12:17.013Z",
-    "duration": 9817,
+    "failures": 0,
+    "start": "2020-08-20T13:15:34.361Z",
+    "end": "2020-08-20T13:15:38.923Z",
+    "duration": 4562,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d33cfff2-048c-4e7f-9001-a5cc21d098aa",
+      "uuid": "2ebe3344-1c3a-43da-a2d3-bbaf618c755f",
       "title": "",
       "fullFile": "cypress/testSuite/registerTests/RegisterUserTest.js",
       "file": "cypress/testSuite/registerTests/RegisterUserTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ce779901-decd-4eb1-8ca5-ca6ef0250429",
+          "uuid": "94ca38d2-39fb-4add-9681-20eb3f048a37",
           "title": "Hooks",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Register new User",
               "fullTitle": "Hooks Register new User",
               "timedOut": null,
-              "duration": 8935,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 3665,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "var homePage = new _HomePage[\"default\"]();\nvar registerPage = new _RegisterPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nhomePage.clickOnRegisterLink(); //var el = registerPage.getCreateAccountElement();\nregisterPage.enterUserEmal(this.data.email1);\nregisterPage.enterUserPassword(this.data.password);\nregisterPage.enterUserConfirmPassword(this.data.password);\ncy.get('button[type=\"submit\"]').click();\ncy.elementContainsText('div>main>h1', 'Register confirmation');\ncy.elementContainsText('div>main>p', 'Please check your email to confirm your account.');",
-              "err": {
-                "message": "AssertionError: Timed out retrying: expected '<h1>' to contain text 'Register confirmation', but the text was 'Register'",
-                "estack": "AssertionError: Timed out retrying: expected '<h1>' to contain text 'Register confirmation', but the text was 'Register'\n    at Context.eval (http://register.nsncareers.com/__cypress/tests?p=cypress/support/index.js:39:19)",
-                "diff": "- 'Register'\n+ 'Register confirmation'\n"
-              },
-              "uuid": "1c9e9f21-7f58-444d-8797-87b9340c7c6b",
-              "parentUUID": "ce779901-decd-4eb1-8ca5-ca6ef0250429",
+              "err": {},
+              "uuid": "ebc39c8a-c706-4cf2-a4dd-2862f302af9a",
+              "parentUUID": "94ca38d2-39fb-4add-9681-20eb3f048a37",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "1c9e9f21-7f58-444d-8797-87b9340c7c6b"
+          "passes": [
+            "ebc39c8a-c706-4cf2-a4dd-2862f302af9a"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8935,
+          "duration": 3665,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
