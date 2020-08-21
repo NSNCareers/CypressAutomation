@@ -28,17 +28,35 @@ describe('Hooks', () => {
       // runs once after all tests in the block
     })
 
-    it("Login Logout User",function(){
+    it("Login Error Message",function(){
       var homePage = new HomePage();
       var loginPage = new LoginPage();
+
       cy.visit(Cypress.env('url'));
+
+      // Start server
+      cy.server();
+
+      //Listen to API Request
+      cy.route(
+        {
+          method: 'PUT',
+          url: 'nsncareers.com/',
+          status: 404,
+          response: {
+            error: 'Invalid login attempt.'
+          },
+          delay: 2000
+        }
+      ).as('invalidMessage');
+
+      
       homePage.clickOnLoginLink();
-      loginPage.enterUserEmal(this.data.email);
+      loginPage.enterUserEmal(this.data.email1);
       loginPage.enterUserPassword(this.data.password);
       loginPage.clickOnRememberMeCheckBox();
       loginPage.clickOnLoginButton();
-      cy.elementContainsText('li>a[title="Manage"]','Hello snscareers@yahoo.com!');
 
-
+      cy.get('div[class*="errors"]>ul>li').should('contain','Invalid login attempt.');
   })
   })

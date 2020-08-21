@@ -28,17 +28,25 @@ describe('Hooks', () => {
       // runs once after all tests in the block
     })
 
-    it("Login Logout User",function(){
+    it("Login Unregistered User",function(){
       var homePage = new HomePage();
       var loginPage = new LoginPage();
+
       cy.visit(Cypress.env('url'));
+      
+      // Start server
+      cy.server();
+
+      //Listen to API Request
+      cy.route('Get','http://loging.nsncareers.com/').as('getStatusCode');
+
+      
       homePage.clickOnLoginLink();
       loginPage.enterUserEmal(this.data.email);
       loginPage.enterUserPassword(this.data.password);
       loginPage.clickOnRememberMeCheckBox();
       loginPage.clickOnLoginButton();
-      cy.elementContainsText('li>a[title="Manage"]','Hello snscareers@yahoo.com!');
 
-
+      //cy.wait('@getStatusCode').its('status').should('eq',200);
   })
   })

@@ -28,17 +28,18 @@ describe('Hooks', () => {
       // runs once after all tests in the block
     })
 
-    it("Login Logout User",function(){
-      var homePage = new HomePage();
-      var loginPage = new LoginPage();
-      cy.visit(Cypress.env('url'));
-      homePage.clickOnLoginLink();
-      loginPage.enterUserEmal(this.data.email);
-      loginPage.enterUserPassword(this.data.password);
-      loginPage.clickOnRememberMeCheckBox();
-      loginPage.clickOnLoginButton();
-      cy.elementContainsText('li>a[title="Manage"]','Hello snscareers@yahoo.com!');
+    it("Add User to DB",function(){
 
-
+      let body=
+      {
+        "name": "James",
+        "DOB": "22/01/1980"
+      }
+      
+      //cy.request('POST','http://loging.nsncareers.com/',body)
+      //.then(function(response)
+      //{
+        //expect(response.body).to.have.property('Message','Success');
+      //})
   })
   })
