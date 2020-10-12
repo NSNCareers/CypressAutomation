@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-08-21T05:11:16.411Z",
-    "end": "2020-08-21T05:11:18.681Z",
-    "duration": 2270,
+    "start": "2020-10-12T23:48:41.261Z",
+    "end": "2020-10-12T23:48:44.420Z",
+    "duration": 3159,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1ce9f9b4-ac0b-4e00-b260-e6335fb8ac2c",
+      "uuid": "a5f4d34f-e499-42ce-a515-7a850df411a9",
       "title": "",
       "fullFile": "cypress/testSuite/xhrTests/verifyLoginRequestSuccessfull.js",
       "file": "cypress/testSuite/xhrTests/verifyLoginRequestSuccessfull.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b5593986-e61f-411e-a889-2fa7b33fe3ce",
+          "uuid": "3180de01-f8e1-40cb-be41-d8f6a431ee38",
           "title": "Hooks",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login Unregistered User",
               "fullTitle": "Hooks Login Unregistered User",
               "timedOut": null,
-              "duration": 1381,
+              "duration": 2206,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "var homePage = new _HomePage[\"default\"]();\nvar loginPage = new _loginPage[\"default\"]();\ncy.visit(Cypress.env('url')); // Start server\ncy.server(); //Listen to API Request\ncy.route('Get', 'http://loging.nsncareers.com/').as('getStatusCode');\nhomePage.clickOnLoginLink();\nloginPage.enterUserEmal(this.data.email);\nloginPage.enterUserPassword(this.data.password);\nloginPage.clickOnRememberMeCheckBox();\nloginPage.clickOnLoginButton(); //cy.wait('@getStatusCode').its('status').should('eq',200);",
               "err": {},
-              "uuid": "41fceefa-5cba-4014-8502-766d55fb0caf",
-              "parentUUID": "b5593986-e61f-411e-a889-2fa7b33fe3ce",
+              "uuid": "84a7df49-bb1e-4223-94dc-b6cad2286f0b",
+              "parentUUID": "3180de01-f8e1-40cb-be41-d8f6a431ee38",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "41fceefa-5cba-4014-8502-766d55fb0caf"
+            "84a7df49-bb1e-4223-94dc-b6cad2286f0b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1381,
+          "duration": 2206,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
